@@ -26,7 +26,9 @@
           }}</v-card-subtitle>
 
           <v-card-text class="text--primary">
-            <div v-if="item.result">Result: {{ utils.hexToAscii(item.result) }}</div>
+            <div v-if="item.result">
+              Result: {{ utils.hexToAscii(item.result) }}
+            </div>
           </v-card-text>
 
           <v-card-actions>
