@@ -20,6 +20,8 @@ The competitor:
 
 [You can try it here. A PoC as it is, without any commitments or guarantee](https://finisher-e976e.web.app/)
 
+Video is coming really soon
+
 Disclaimer:
 
 - Some authorization checking is missing, the UI/UX is definitely lacking, and please don't start on the code quality, a clean up is on schedule very soon.
