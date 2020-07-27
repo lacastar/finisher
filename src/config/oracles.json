@@ -1,0 +1,26 @@
+{
+    "oracles": [
+        {
+            "id": "futanet",
+            "name": "Futanet webextract",
+            "medal_properties": [
+                "verseny"
+            ],
+            "competitor_properties": [
+                "rajtszam"
+            ],
+            "endpoint": "https://us-central1-finisher-e976e.cloudfunctions.net/bsioracle"
+        },
+        {
+            "id": "test",
+            "name": "Test oracle",
+            "medal_properties": [
+                "raceid", "year"
+            ],
+            "competitor_properties": [
+                "wallet", "id"
+            ],
+            "endpoint": ""
+        }
+    ]
+}

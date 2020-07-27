@@ -20,3 +20,20 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Private
+.secret
+.firebase-creds
+.firebase-local.env
+
+.openzeppelin\.session
+.firebase/hosting.cHVibGlj.cache
+.openzeppelin/.session
+design.txt
+firebase-debug.log
+firestore-debug.log
+functions/ui-debug.log
+howto.txt
+ui-debug.log
+*.bak
+.firebase/hosting.ZGlzdA.cache
