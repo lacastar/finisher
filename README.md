@@ -19,8 +19,9 @@ The competitor:
 [PoC as it is, without any commitments or guarantee](https://finisher-e976e.web.app/)
 
 Disclaimer:
--Some authorization checking is missing, the UI/UX is definitely lacking, and please don't start on the code quality, a clean up is on schedule very soon.
--The BSI (futanet.hu) Oracle was reverse engineered, so it can stop working any time, since I am not associated with them in any way, so probably they won't notify me before changing anything.
+- Some authorization checking is missing, the UI/UX is definitely lacking, and please don't start on the code quality, a clean up is on schedule very soon.
+- The BSI (futanet.hu) Oracle was reverse engineered, so it can stop working any time, since I am not associated with them in any way, so probably they won't notify me before changing anything.
+- The medal claim transaction will be signed in the cloud function, soon...
 
 ## Project setup
 ```
