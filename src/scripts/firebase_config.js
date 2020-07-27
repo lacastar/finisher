@@ -20,13 +20,14 @@ const db = firebase.firestore();
 const functions = firebase.functions();
 const auth = firebase.auth();
 
+/*
 if (location.hostname === "localhost") {
   db.settings({
     host: "localhost:8888",
     ssl: false
   });
   firebase.functions().useFunctionsEmulator("http://localhost:5001");
-}
+}*/
 
 const { currentUser } = auth;
 

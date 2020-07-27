@@ -9,7 +9,7 @@
           <v-row class="mx-2">
             <v-col cols="12">
               <v-text-field
-                prepend-icon="mdi-bell"
+                prepend-icon="mdi-wallet"
                 placeholder="Wallet address: "
                 label="Wallet"
                 v-model="wallet"
@@ -19,7 +19,7 @@
             </v-col>
             <v-col cols="6">
               <v-text-field
-                prepend-icon="mdi-text"
+                prepend-icon="mdi-link-plus"
                 label="Oracle"
                 v-model="oracle.name"
                 :disabled="true"

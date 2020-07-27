@@ -9,7 +9,7 @@
           <v-row class="mx-2">
             <v-col cols="12">
               <v-text-field
-                prepend-icon="mdi-bell"
+                prepend-icon="mdi-medal-outline"
                 placeholder="2020 Budapest Super 10K"
                 label="Name"
                 v-model="medal.name"
@@ -19,11 +19,19 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                prepend-icon="mdi-note-text-outline"
+                prepend-icon="mdi-checkbox-marked-outline"
                 placeholder="Universal Organizer"
                 label="Organizer"
                 v-model="medal.organizer"
                 :rules="nameRules"
+              />
+            </v-col>
+            <v-col cols="12">
+              <v-text-field
+                prepend-icon="mdi-image-frame"
+                placeholder="link to image"
+                label="Image"
+                v-model="medal.img"
               />
             </v-col>
             <!-- <v-col cols="12">
@@ -38,6 +46,7 @@
             </v-col> -->
             <v-col cols="6">
               <v-select
+                prepend-icon="mdi-link-plus"
                 v-model="medal.oracle"
                 :items="oracles"
                 item-text="name"
@@ -103,6 +112,7 @@ export default {
         name: "",
         organizer: "",
         // count: 10,
+        img: "",
         oracle: null,
         oracleProperties: {}
       },
@@ -118,6 +128,7 @@ export default {
         name: "",
         organizer: "",
         // count: 10,
+        img: "",
         oracle: null,
         oracleProperties: {}
       };
@@ -129,6 +140,7 @@ export default {
         organizer: this.medal.organizer,
         // count: this.medal.count,
         wallet: this.activeAccount,
+        img: this.medal.img,
         oracle: this.medal.oracle.id,
         oracleProperties: this.medal.oracleProperties
       };

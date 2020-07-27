@@ -15,7 +15,7 @@ function refreshMedals() {
 }
 
 function resetMedals() {
-  store.commit("resetMedals");
+  store.commit("resetState");
 }
 
 function refreshRegisteredMedals(wallet) {

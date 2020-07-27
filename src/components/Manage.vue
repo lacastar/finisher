@@ -4,11 +4,17 @@
       <v-col cols="12" md="6">
         <v-expansion-panels v-if="medals.length > 0" popout>
           <v-expansion-panel v-for="(item, index) in medals" :key="item.id">
-            <v-expansion-panel-header color="blue lighten-4" class="text-h6"
+            <v-expansion-panel-header
+              :color="
+                item.data.status == 'Draft'
+                  ? 'blue lighten-4'
+                  : 'green lighten-4'
+              "
+              class="text-h6"
               >{{ item.data.name }} - {{ item.data.organizer }}
             </v-expansion-panel-header>
             <v-expansion-panel-content>
-              <span class="text-overline">Status:</span> {{ item.data.status }}
+              <span class="text-overline">Status: {{ item.data.status }}</span>
               <v-simple-table dense style="max-width:20em;">
                 <template v-slot:default>
                   <tbody>
@@ -25,10 +31,18 @@
               </v-simple-table>
               <br />
               <v-card-actions>
-                <v-btn color="primary" outlined @click="commit(item)"
+                <v-btn
+                  v-if="item.data.status == 'Draft'"
+                  color="primary"
+                  outlined
+                  @click="commit(item)"
                   >Commit</v-btn
                 >
-                <v-btn color="primary" outlined :to="'/register/' + index"
+                <v-btn
+                  v-if="item.data.status == 'Ready'"
+                  color="green"
+                  outlined
+                  :to="'/register/' + index"
                   >Register</v-btn
                 >
                 <v-spacer />

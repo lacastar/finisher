@@ -13,7 +13,7 @@ const db = admin.firestore();
 const web3 = new Web3("ws://localhost:9545");
 const account1 = "0x262453740FF4a35c93cA1eBf64a2b1d4DB2D1d92";
 const privateKey1 = Buffer.from(
-  "a5a7af175f2c29f351455d8b70b1b9390133c899cb25443ff5117a879702b712",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   "hex"
 );
 
@@ -111,6 +111,7 @@ exports.createMedal = functions.https.onCall(async (data, context) => {
     name: data.name,
     organizer: data.organizer,
     wallet: data.wallet,
+    img: data.img,
     distributed: 0,
     registered_count: 0,
     // registered: {},
