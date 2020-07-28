@@ -29,6 +29,9 @@ Disclaimer:
 - The BSI (futanet.hu) Oracle was reverse engineered, so it can stop working any time, since I am not associated with them in any way, so probably they won't notify me before changing anything.
 - The medal claim transaction will be signed in the cloud function, soon...
 
+### Why not ERC 721
+There is a standard for collectibles: [ERC721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721) There are definitely upsides to use it: standard wallets could be used to display our collection (well, kind of), and less coding. The cons are the amount of boilerplate needed, since most of the use-cases are not applicable, especially trading seems unethical the least (however migrating to another account still should be possible). In the Unitize (SFBW) Hackathon due to the lack of time implementing and testing it was out of scope, but in the long run these advantages might worth a rethink.
+
 ## Project setup
 
 ```
