@@ -37,3 +37,4 @@ howto.txt
 ui-debug.log
 *.bak
 .firebase/hosting.ZGlzdA.cache
+.apisecret

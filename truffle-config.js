@@ -18,10 +18,14 @@
  *
  */
 
-const HDWalletProvider = require('@truffle/hdwallet-provider');
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 const fs = require("fs");
 const ropsten_key = fs
   .readFileSync(".secret")
+  .toString()
+  .trim();
+const ropsten_apikey = fs
+  .readFileSync(".apisecret")
   .toString()
   .trim();
 
@@ -75,11 +79,7 @@ module.exports = {
     // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     // },
     ropsten: {
-      provider: () =>
-        new HDWalletProvider(
-          [ropsten_key],
-          `https://ropsten.infura.io/v3/51c83db79b994f77b20655289f7d5ae7`
-        ),
+      provider: () => new HDWalletProvider([ropsten_key], ropsten_apikey),
       network_id: 3, // Ropsten's id
       gas: 5500000, // Ropsten has a lower block limit than mainnet
       confirmations: 2, // # of confs to wait between deployments. (default: 0)
