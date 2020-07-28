@@ -22,6 +22,10 @@ The competitor:
 
 [You can try it here. A PoC as it is, without any commitments or guarantee](https://finisher-e976e.web.app/)
 
+To test it you need a Web3 client like MetaMask installed in your browser, and a Google account and third party cookies enabled (sorry about both of it). It is configured now on the Ropsten test network, where you can obtain free Ether from a couple of faucets, like [this](https://faucet.ropsten.be/). (If the contract would run out of LINK tokens, just send some to it's address: 0x11366E2EddeE6A71aFe28B695aF8d6f31d53Dc1E - it is possible to obtain [HERE](https://ropsten.chain.link/) )
+You can create a medal on the Manage screen (just click the big plus in the bottom right corner) For Oracle choose "Futanet webextract" - it will get data from the [Futanet Database](http://www.futanet.hu/versenyeredmeny.php) For the 'verseny' parameter check what the page sends in the form with the same name (ie. '2020_felm10_e'). After you save and commit this competition it is possible to register competitors. For this Oracle you'll have to provide a 'rajtszam' parameter, that you can find in the query result on the Futanet page as rajtszám/Start# - ie. 13051 in our current example.
+Once it is done, you should login as the competitor (change both Google login and Web3 account if needed, but you can test with the same accounts as well). Your new medal should appear on your home screen, and after Claiming it, your result should display as well.
+
 [![Walkthrough](http://img.youtube.com/vi/OOp05uRVFbQ/0.jpg)](http://www.youtube.com/watch?v=OOp05uRVFbQ)
 
 Disclaimer:

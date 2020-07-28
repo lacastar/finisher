@@ -126,13 +126,11 @@ contract Finisher is ChainlinkClient {
   }
 
   function claimMedal(string memory _offchainid, string memory _endpoint) public payable{
-    //require(!finishers[msg.sender][_offchainid].isSet, "Medal already claimed!");
-    //require(msg.value == medalcost, "Insufficent fund sent!");
+    require(!finishers[msg.sender][_offchainid].isSet, "Medal already claimed!");
+    require(msg.value == medalcost, "Insufficent fund sent!");
     Chainlink.Request memory req = buildChainlinkRequest(jobId, address(this), this.fulfillClaim.selector);
-    //bytes(_endpoint);
     req.add("get", _endpoint);
     req.add("path", "result");
-    //bytes(_offchainid);
     bytes32 requestId = sendChainlinkRequestTo(oracle, req, oraclecost * LINK);
     requestmap[requestId] = OracleRequest(msg.sender, _offchainid);
   }
