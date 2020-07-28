@@ -13,6 +13,9 @@
                   Welcome to Finisher, tracking your achievements on blockchain!
                 </p>
               </v-card-text>
+              <v-card-subtitle class="pb-0"
+                >Please enable third-party cookies to login.</v-card-subtitle
+              >
               <v-card-actions>
                 <v-spacer />
                 <v-btn color="primary" v-on:click="signIn()">
