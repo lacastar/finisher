@@ -34,6 +34,15 @@ Disclaimer:
 ### Why not ERC 721
 There is a standard for collectibles: [ERC721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721) There are definitely upsides to use it: standard wallets could be used to display our collection (well, kind of), and less coding. The cons are the amount of boilerplate needed, since most of the use-cases are not applicable, especially trading seems unethical the least (however migrating to another account still should be possible). In the Unitize (SFBW) Hackathon due to the lack of time implementing and testing it was out of scope, but in the long run these advantages might worth a rethink.
 
+## What is not in the repo or should be configured
+
+- In .truffle-config under the Ropsten network an account must be specified, change it to yours. It's private key is supposed to be in /.secret
+- .firebase-local.env If you plan to test it locally.
+
+## Prerequisites
+
+- Firebase account
+
 ## Project setup
 
 ```
