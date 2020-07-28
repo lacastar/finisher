@@ -2,6 +2,8 @@
 
 ## Collect your finishing medals and validated results on blockchain
 
+### (And go a bit easier on mother nature, since most of it would end up in landfills anyway)
+
 ![Home screen](home.png "Home screen")
 
 The flow is easy.
