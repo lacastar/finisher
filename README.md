@@ -20,7 +20,7 @@ The competitor:
 
 [You can try it here. A PoC as it is, without any commitments or guarantee](https://finisher-e976e.web.app/)
 
-[![Walkthrough](http://img.youtube.com/vi/H57dR5dLV7g/0.jpg)](http://www.youtube.com/watch?v=H57dR5dLV7g)
+[![Walkthrough](http://img.youtube.com/vi/OOp05uRVFbQ/0.jpg)](http://www.youtube.com/watch?v=OOp05uRVFbQ)
 
 Disclaimer:
 
