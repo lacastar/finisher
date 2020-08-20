@@ -2,7 +2,7 @@
 
 ## Own the Internet
 
-### Create a microsite from your medals, and share them on SkyNet with a personal Namebase domain
+### Create a microsite from your medals, and share them on SkyNet with a personal Namebase domain CLICK THE PICTURE BELOW FOR A DEMO VIDEO
 
 [![Presentation video](demo.png)](https://siasky.net/AACTWQsLQNnttncYDBbe474tgLhsbjUZoACgS_DSsXqlSQ)
 
