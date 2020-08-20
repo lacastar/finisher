@@ -20,19 +20,20 @@ const db = firebase.firestore();
 const functions = firebase.functions();
 const auth = firebase.auth();
 
-/*
 if (location.hostname === "localhost") {
   db.settings({
     host: "localhost:8888",
     ssl: false
   });
   firebase.functions().useFunctionsEmulator("http://localhost:5001");
-}*/
+}
 
 const { currentUser } = auth;
 
 const createMedal = functions.httpsCallable("createMedal");
+const shareResults = functions.httpsCallable("shareResults");
 const checkMedal = functions.httpsCallable("checkMedal");
+const claimMedal = functions.httpsCallable("claimMedal");
 
 //function serverTimestamp() {
 //  return firebase.firestore.FieldValue.serverTimestamp();
@@ -153,29 +154,31 @@ function getRegisteredMedals(wallet, process) {
     });
 }
 
-function getRegisteredWallets(medalid, process) {
-  db.collection("wallets-registered-to-medals")
-    .doc(medalid)
-    .get()
-    .then(doc => {
-      if (doc.exists) {
-        process(doc);
-      } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-      }
-    })
-    .catch(error => {
-      console.log("Error getting registered wallets:", error);
-    });
-}
-
 function getMedal(medalid, process) {
   db.collection("medals")
     .doc(medalid)
     .get()
     .then(doc => {
       if (doc.exists) process(doc);
+    });
+}
+
+function getDomainuser(userid, process) {
+  db.collection("users")
+    .doc(userid)
+    .get()
+    .then(doc => {
+      if (doc.exists) process(doc);
+    });
+}
+
+function setDomainuser(userid, userdata, process) {
+  db.collection("users")
+    .doc(userid)
+    .set(userdata, { merge: true })
+    .then(() => process())
+    .catch(error => {
+      console.log("Error updating result: ", error);
     });
 }
 
@@ -187,12 +190,15 @@ export {
   removeField,
   //  serverTimestamp,
   createMedal,
+  shareResults,
   getMedals,
   getMedal,
+  claimMedal,
   updateMedal,
   updateResult,
   registerCompetitor,
   checkMedal,
   getRegisteredMedals,
-  getRegisteredWallets
+  getDomainuser,
+  setDomainuser
 };

@@ -1,7 +1,8 @@
 import store from "../store/index";
+// import { doc } from "prettier";
 
 const fb = require("./firebase_config");
-const oracles = require("../config/oracles.json")["oracles"];
+const oracles = require("../../functions/config/oracles.json")["oracles"];
 
 const oraclemap = {};
 oracles.forEach(oracle => {
@@ -16,6 +17,21 @@ function refreshMedals() {
 
 function resetMedals() {
   store.commit("resetState");
+}
+
+function getDomainuser() {
+  fb.getDomainuser(store.state.user.uid, doc => {
+    if (doc.exists) {
+      store.commit("setDomainuser", doc.data());
+    }
+  });
+}
+
+function setDomainuser(userdata, process) {
+  fb.setDomainuser(store.state.user.uid, userdata, () => {
+    store.commit("setDomainuser", userdata);
+    if (process) process();
+  });
 }
 
 function refreshRegisteredMedals(wallet) {
@@ -43,6 +59,8 @@ export {
   resetMedals,
   refreshRegisteredMedals,
   refreshRegisteredWallets,
+  getDomainuser,
+  setDomainuser,
   oracles,
   oraclemap
 };

@@ -38,3 +38,4 @@ ui-debug.log
 *.bak
 .firebase/hosting.ZGlzdA.cache
 .apisecret
+functions/.runtimeconfig.json

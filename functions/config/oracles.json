@@ -9,7 +9,7 @@
             "competitor_properties": [
                 "rajtszam"
             ],
-            "endpoint": "https://us-central1-finisher-e976e.cloudfunctions.net/bsioracle"
+            "method": "bsioracle"
         },
         {
             "id": "test",
@@ -20,7 +20,7 @@
             "competitor_properties": [
                 "wallet", "id"
             ],
-            "endpoint": ""
+            "endpoint": "testoracle"
         }
     ]
 }

@@ -89,6 +89,7 @@ export default {
       this.$store.commit("setUser", user);
       console.log(`User changed: ${JSON.stringify(this.$store.state.user)}`);
       business.resetMedals();
+      business.getDomainuser();
     });
   }
 };

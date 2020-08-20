@@ -3,9 +3,10 @@
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
+      dense
       color="blue darken-3"
       dark
-      fixed
+      hide-on-scroll
     >
       <v-toolbar-title style="width: 300px; cursor: pointer;" class="ml-0 pl-4"
         ><v-btn to="/" :text="true"><span>Finisher</span></v-btn>
@@ -38,7 +39,9 @@
       </v-menu>
     </v-app-bar>
 
-    <router-view v-if="isDrizzleInitialized" /> </v-app
+    <v-main>
+      <router-view v-if="isDrizzleInitialized" />
+    </v-main> </v-app
 ></template>
 
 <script>
