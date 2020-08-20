@@ -1,5 +1,11 @@
 # Finisher
 
+## Own the Internet
+
+### Create a microsite from your medals, and share them on SkyNet with a personal Namebase domain
+
+![Presentation video](https://siasky.net/AACTWQsLQNnttncYDBbe474tgLhsbjUZoACgS_DSsXqlSQ)
+
 ## Collect your finisher medals on blockchain
 
 ### (And go a bit easier on mother nature, since most of it would end up in landfills anyway)
@@ -10,16 +16,16 @@ The flow is easy.
 The organizer:
 
 - Creates an event and a medal in Finisher, specifies an oracle that can retrieve the results
-- Submits the medal to the blockchain
+- Submits the medal to the blockchain - currently the complete dataset is stored off-chain, only a hash is on-chain
 - Registers the competitors with their wallet and attributes that are needed to retrieve results (manually or with an API)
 
 ![Manager screen](manage.png "Manager screen")
 
 The competitor:
 
-- When the results are ready, the competitor can claim the medal and the achievement is stored on-chain
-- A gallery of the results can be created and shared via SkyNet possibly under a custom Handshake domain (under the dfmo TLD, that stands for Digital Finisher Medals Online)
-- (It will be possible to add off-chain metadata and media later that will be funded by a small fee)
+- When the results are ready, the competitor can claim the medal and the achievement is stored on-chain (both a reference to the medal, and the exact result)
+- A gallery of the results can be created and shared via SkyNet, possibly under a custom Handshake domain (under the dfmo TLD, that stands for Digital Finisher Medals Online)
+- (It will be possible to add metadata and media later that will be probably funded by a small fee)
 
 [You can try it here. Currently a PoC as it is, without any commitments or guarantee](https://finisher-e976e.web.app/)
 
