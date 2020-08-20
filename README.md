@@ -4,7 +4,7 @@
 
 ### Create a microsite from your medals, and share them on SkyNet with a personal Namebase domain
 
-![Presentation video](https://siasky.net/AACTWQsLQNnttncYDBbe474tgLhsbjUZoACgS_DSsXqlSQ)
+[![Presentation video](demo.png)](https://siasky.net/AACTWQsLQNnttncYDBbe474tgLhsbjUZoACgS_DSsXqlSQ)
 
 ## Collect your finisher medals on blockchain
 
